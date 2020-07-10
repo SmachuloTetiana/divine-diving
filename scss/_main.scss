@@ -85,11 +85,52 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  padding: 0 10px;
+  position: relative;
 
   display: flex;
   flex-direction: column;
 
+  .top-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .logo img {
+      width: 220px;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+
+    a {
+      align-self: baseline;
+      font-weight: 600;
+      color: $whiteColor;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 110px;
+      border-left: 2px solid $darkBlueColor;
+
+      &:first-of-type {
+        border: none;
+      }
+
+      &:hover {
+        color: $blueGreenColor;
+        @extend .animate;
+      }
+    }
+  }
+
   section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
     .title {
       color: $whiteColor;
       text-align: center;
@@ -99,7 +140,7 @@ p {
       display: block;
       text-align: center;
       text-decoration: none;
-      margin: 0 auto;
+      margin: 10px auto 0 auto;
     }
   }
 }
@@ -177,7 +218,7 @@ p {
 /** End About **/
 
 main {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 

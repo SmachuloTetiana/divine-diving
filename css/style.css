@@ -45,7 +45,7 @@ p {
   .btn:hover, .form-btn:hover {
     background-color: #607d8b; }
 
-.animate, .btn:hover, .form-btn:hover {
+.animate, .btn:hover, .form-btn:hover, .header nav a:hover {
   -webkit-transition: 0.4s Ease;
   -moz-transition: 0.4s Ease;
   -o-transition: 0.4s Ease;
@@ -66,16 +66,44 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  padding: 0 10px;
+  position: relative;
   display: flex;
   flex-direction: column; }
-  .header section .title, .header section .subtitle {
-    color: #ffffff;
-    text-align: center; }
-  .header section .btn-top {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    margin: 0 auto; }
+  .header .top-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .header .top-wrapper .logo img {
+      width: 220px; }
+  .header nav {
+    display: flex;
+    flex-direction: row; }
+    .header nav a {
+      align-self: baseline;
+      font-weight: 600;
+      color: #ffffff;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 110px;
+      border-left: 2px solid #607d8b; }
+      .header nav a:first-of-type {
+        border: none; }
+      .header nav a:hover {
+        color: #01acac; }
+  .header section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    .header section .title, .header section .subtitle {
+      color: #ffffff;
+      text-align: center; }
+    .header section .btn-top {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      margin: 10px auto 0 auto; }
 
 /** Toolbar **/
 .toolbar {
@@ -119,7 +147,7 @@ p {
 
 /** End About **/
 main {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto; }
 
 /** Contact **/
